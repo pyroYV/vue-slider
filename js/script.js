@@ -43,7 +43,7 @@ const app = new Vue ({
         nextImage(){
             // this.carouselIndex++
             this.carouselIndex=(this.carouselIndex+1)%slides.length
-            
+
         },
         prevImage(){
             console.log((this.carouselIndex-1)%slides.length)
@@ -52,6 +52,11 @@ const app = new Vue ({
                 this.carouselIndex += slides.length
             }
             
+        },
+        setThumb(index){
+        //clcchi sulla thumb n imposto carouselIndex a n
+            this.carouselIndex = index
+
         }
     },
 }) 

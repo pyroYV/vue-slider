@@ -29,19 +29,19 @@
                 <div class="thumbs">
                     <div @click='prevImage'class="prev"></div>
                     <div @click='nextImage' class="next"></div>
-                    <div class="thumb active">
+                    <div @click='setThumb(0)' :class="{active: carouselIndex == 0}" class="thumb">
                         <img src="img/01.jpg" alt="Svezia"/>
                     </div>
-                    <div class="thumb">
+                    <div @click='setThumb(1)' :class="{active: carouselIndex == 1}" class="thumb">
                         <img src="img/02.jpg" alt="Svizzera" />
                     </div>
-                    <div class="thumb">
+                    <div @click='setThumb(2)' :class="{active: carouselIndex == 2}" class="thumb">
                         <img src="img/03.jpg" alt="Gran Bretagna" />
                     </div>
-                    <div class="thumb">
+                    <div @click='setThumb(3)' :class="{active: carouselIndex == 3}" class="thumb">
                         <img src="img/04.jpg" alt="Germania" />
                     </div>
-                    <div class="thumb">
+                    <div @click='setThumb(4)' :class="{active: carouselIndex == 4}" class="thumb">
                         <img src="img/05.jpg" alt="Paradise" />
                     </div>
                 </div>
