@@ -29,10 +29,11 @@
                 <div class="thumbs">
                     <div @click='prevImage'class="prev"></div>
                     <div @click='nextImage' class="next"></div>
-                    <div @click='setThumb(0)' :class="{active: carouselIndex == 0}" class="thumb">
-                        <img src="img/01.jpg" alt="Svezia"/>
+                    <div v-for="(slide, index) in slides" :key="index" @click='setThumb(index)'
+                     :class="{active: carouselIndex == index}" class="thumb">
+                        <img :src="slide.image" :alt="slide.title"/>
                     </div>
-                    <div @click='setThumb(1)' :class="{active: carouselIndex == 1}" class="thumb">
+                    <!-- <div @click='setThumb(1)' :class="{active: carouselIndex == 1}" class="thumb">
                         <img src="img/02.jpg" alt="Svizzera" />
                     </div>
                     <div @click='setThumb(2)' :class="{active: carouselIndex == 2}" class="thumb">
@@ -42,7 +43,7 @@
                         <img src="img/04.jpg" alt="Germania" />
                     </div>
                     <div @click='setThumb(4)' :class="{active: carouselIndex == 4}" class="thumb">
-                        <img src="img/05.jpg" alt="Paradise" />
+                        <img src="img/05.jpg" alt="Paradise" /> -->
                     </div>
                 </div>
 
