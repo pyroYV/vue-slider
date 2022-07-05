@@ -56,8 +56,12 @@ const app = new Vue ({
         setThumb(index){
         //clcchi sulla thumb n imposto carouselIndex a n
             this.carouselIndex = index
-
-        }
+        },
+        
     },
+    mounted() {
+        setInterval(this.nextImage,3000)
+    }
+      
 }) 
 
