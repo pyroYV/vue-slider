@@ -33,8 +33,8 @@ const app = new Vue ({
     el: '#app',
     data:{
         carouselIndex: 0,
-        imageSrc:slides.map(slides => slides.image),
         slides,
+        interval:null
         
 
     },
@@ -57,10 +57,15 @@ const app = new Vue ({
         //clcchi sulla thumb n imposto carouselIndex a n
             this.carouselIndex = index
         },
-        
+        stopInterval(){
+            clearInterval(this.interval)
+        },
+        startInterval(){
+            this.interval = setInterval(this.nextImage,3000)
+        }
     },
     mounted() {
-        setInterval(this.nextImage,3000)
+        this.startInterval()
     }
       
 }) 
